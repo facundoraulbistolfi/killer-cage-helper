@@ -1,22 +1,19 @@
 # killer-cage-helper
 
-Minimal helper app for exploring **Killer Sudoku cage combinations**.
+Small Vite + TypeScript app for exploring valid **Killer Sudoku cage combinations**.
 
-## What it does
+## Features
 
-Given a target sum and number of cells, it calculates valid digit combinations using standard Killer Sudoku rules:
+- target sum + cell count calculator
+- optional allowed / excluded digit filters
+- reusable solver utility in `src/lib/cage.ts`
+- baseline tests with Vitest
+
+## Rules modeled
 
 - digits from 1 to 9
 - no repeated digits inside a cage
-- combinations sorted in ascending order
-
-## Planned scope
-
-- cage combination calculator
-- quick filters by included / excluded digits
-- simple web UI
-- reusable TypeScript solver utilities
-- tests for the core combinatorics logic
+- combinations returned in ascending order
 
 ## Getting started
 
@@ -31,9 +28,13 @@ npm run dev
 npm run dev
 npm run build
 npm run preview
+npm run check
 npm run test
 ```
 
-## Notes
+## Next ideas
 
-This repository starts with a small Vite + TypeScript setup so the solving logic and UI can evolve independently.
+- keyboard-friendly grid entry
+- candidate visualizations per cage size
+- import from existing puzzle layouts
+- UI for intersections / shared-cell reasoning
